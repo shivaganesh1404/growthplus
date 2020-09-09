@@ -1,0 +1,49 @@
+<mat-card style="margin-bottom: 10px; height: 100%;">
+	<mat-card-content style="height: 100%;">
+        <h1 mat-dialog-title>Profile  Details</h1>
+        <form class="example-form">
+			<div class="col-md-12">
+
+				<mat-form-field>
+                    <mat-label>Name</mat-label>
+
+					<input type="text" matInput  placeholder="Name" value="{{Name}}"  disabled>
+                </mat-form-field>
+                
+			</div>
+			<div class="col-md-12">
+				<mat-form-field>
+                    <mat-label>Email</mat-label>
+
+                    <input type="text" matInput  placeholder="Email" value="{{Email}}" disabled>
+
+				</mat-form-field>
+			</div>
+			<div class="col-md-12">
+				<mat-form-field>
+                    <mat-label>Gender</mat-label>
+
+                    <select matNativeControl style="padding:10px" [(ngModel)]='Gender'  name="gender">
+                        <option  value="male">
+                         male
+                        </option>
+                        <option  value="female">
+                            female
+                           </option>
+                      </select>
+
+				</mat-form-field>
+			</div>
+			<div class="col-md-12">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Birthday</mat-label>
+                        <input type="text" matInput  placeholder="dd/mm/yyyy"  value="{{Birthday}}" >
+
+                      </mat-form-field>
+			</div>
+			<button mat-raised-button class="btn btn-primary" (click)="updateUnit()" >
+          Update Profile
+        </button>
+    </form>
+	</mat-card-content>
+</mat-card>
